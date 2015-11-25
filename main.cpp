@@ -8,12 +8,30 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    int *a;
-    a=(int *)malloc(4);
-    if(a==0)
-        exit(0);
-    *a=100;
-    printf("a=%x *a=%x\n,a,*a");
+using namespace std;
+int main()
+{
+    int m;
+    int x[5],t;
+    for(int m=0;m<5;m++)
+    {
+        cin>>x[m];
+    }
+    for(int i=0;i<m-1;m++)
+    {
+        for(int j=0;j<m-1-i;j++)
+        {
+            if(x[j+1]>x[j])
+            {
+                t=x[j];
+                x[j]=x[j+1];
+                x[j+1]=t;
+            }
+        }
+}
+    for(int m=0;m<5;m++)
+    {
+        cout<<x[m]<<endl;
+    }
     return 0;
 }
